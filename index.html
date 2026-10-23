@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive guide to digital privacy, computing ethics, and software law.">
+    <title>Privacy Detective | Digital Ethics Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#home">🔎 Privacy Detective</a>
+        <nav aria-label="Main navigation">
+            <a href="#cases">Investigate</a>
+            <a href="#learn">Learn</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#sources">Sources</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <p class="eyebrow">DIGITAL ETHICS LAB · CASE FILE 001</p>
+            <h1>Your data tells a story.<br><span>Who gets to read it?</span></h1>
+            <p class="hero-text">
+                Every app leaves clues. Investigate everyday technology,
+                make difficult decisions, and learn how to protect digital privacy.
+            </p>
+            <a class="button primary" href="#cases">Start investigating →</a>
+            <div class="hero-stats">
+                <div><strong>03</strong><span>Case files</span></div>
+                <div><strong>05</strong><span>Quiz questions</span></div>
+                <div><strong>02</strong><span>Core standards</span></div>
+            </div>
+        </section>
+
+        <section class="section" id="cases">
+            <p class="eyebrow">01 / INVESTIGATION</p>
+            <h2>Open a case file</h2>
+            <p class="section-intro">
+                Read each situation and choose what you think should happen.
+                The feedback explains the reasoning behind each decision.
+            </p>
+
+            <div class="case-grid">
+                <article class="case-card">
+                    <div class="case-icon">📍</div>
+                    <p class="case-label">CASE 01 · LOCATION</p>
+                    <h3>The GPS Mystery</h3>
+                    <p>A free navigation app requests access to your location even when you are not using it.</p>
+                    <p class="question">What is the smartest first move?</p>
+                    <div class="choices" data-case="gps">
+                        <button class="choice" data-correct="false">Approve everything to make the app work.</button>
+                        <button class="choice" data-correct="true">Check why it needs background access and limit permission if possible.</button>
+                        <button class="choice" data-correct="false">Assume location data is never stored.</button>
+                    </div>
+                    <p class="feedback" aria-live="polite"></p>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-icon">🤝</div>
+                    <p class="case-label">CASE 02 · ETHICS</p>
+                    <h3>The Secret Sale</h3>
+                    <p>A developer discovers that their company shares customer data in a way users would not reasonably expect.</p>
+                    <p class="question">What is the most responsible response?</p>
+                    <div class="choices" data-case="ethics">
+                        <button class="choice" data-correct="false">Ignore it because the company earns money.</button>
+                        <button class="choice" data-correct="false">Hide the practice in complicated wording.</button>
+                        <button class="choice" data-correct="true">Raise the concern through appropriate channels and push for transparent, responsible data use.</button>
+                    </div>
+                    <p class="feedback" aria-live="polite"></p>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-icon">🧒</div>
+                    <p class="case-label">CASE 03 · THE LAW</p>
+                    <h3>The Young User</h3>
+                    <p>A covered online service collects personal information from children under 13 in circumstances governed by U.S. children's privacy law.</p>
+                    <p class="question">Which law is especially relevant?</p>
+                    <div class="choices" data-case="law">
+                        <button class="choice" data-correct="false">A law that only governs driving.</button>
+                        <button class="choice" data-correct="true">COPPA, the U.S. Children's Online Privacy Protection Act.</button>
+                        <button class="choice" data-correct="false">A rule that makes all data collection illegal.</button>
+                    </div>
+                    <p class="feedback" aria-live="polite"></p>
+                </article>
+            </div>
+            <p class="case-progress" id="case-progress" aria-live="polite">Cases solved: 0 of 3</p>
+        </section>
+
+        <section class="section learn-section" id="learn">
+            <p class="eyebrow">02 / FIELD NOTES</p>
+            <h2>Know the rules of the digital world</h2>
+            <p class="section-intro">Ethics and law overlap, but they are not the same thing.</p>
+
+            <div class="learn-grid">
+                <article class="learn-card">
+                    <span class="tag">ETHICS</span>
+                    <h3>What should we do?</h3>
+                    <p>Ethics considers fairness, honesty, consent, harm, and respect for people. Something can be technically legal but still be unfair or deceptive.</p>
+                    <p><strong>Example:</strong> An app should explain clearly why it needs sensitive information instead of surprising users later.</p>
+                </article>
+                <article class="learn-card">
+                    <span class="tag law-tag">LAW · UNITED STATES</span>
+                    <h3>COPPA</h3>
+                    <p>The Children's Online Privacy Protection Act applies to covered websites and online services directed to children under 13, and other covered services that have actual knowledge they collect personal information from children under 13.</p>
+                    <p>Its requirements include notices and, in covered circumstances, verifiable parental consent, along with protections for children's personal information.</p>
+                    <a href="https://www.ftc.gov/business-guidance/privacy-security/childrens-privacy" target="_blank" rel="noopener noreferrer">Read the FTC's official COPPA guidance ↗</a>
+                </article>
+                <article class="learn-card">
+                    <span class="tag">PRIVACY PRACTICE</span>
+                    <h3>Reduce your digital trail</h3>
+                    <ul>
+                        <li>Review app permissions regularly.</li>
+                        <li>Share only the information that is necessary.</li>
+                        <li>Use strong, unique passwords and multifactor authentication.</li>
+                        <li>Check privacy settings and read important notices.</li>
+                    </ul>
+                </article>
+                <article class="learn-card">
+                    <span class="tag">CONFIDENTIALITY</span>
+                    <h3>What is an NDA?</h3>
+                    <p>A non-disclosure agreement is a contract that sets rules for protecting and not improperly disclosing specified confidential information.</p>
+                    <p>For example, a software developer may be required to keep unreleased product designs confidential. An NDA does not automatically make every secret lawful or override every other legal obligation.</p>
+                </article>
+            </div>
+
+            <aside class="fact-check">
+                <strong>Detective's rule:</strong>
+                Collecting data can create risks even when a company has a legitimate purpose.
+                Ask what is collected, why it is needed, who can access it, how long it is kept,
+                and whether people have meaningful choices.
+            </aside>
+        </section>
+
+        <section class="section quiz-section" id="quiz">
+            <p class="eyebrow">03 / FINAL CHALLENGE</p>
+            <h2>Test your detective skills</h2>
+            <p class="section-intro">Five questions. Read carefully: the best answer considers both privacy and responsible technology use.</p>
+
+            <div class="quiz-box">
+                <div class="quiz-top">
+                    <span id="question-number">Question 1 of 5</span>
+                    <span id="score-label">Score: 0</span>
+                </div>
+                <div class="progress-track"><div id="progress-fill"></div></div>
+                <h3 id="question-text"></h3>
+                <div id="quiz-answers" class="quiz-answers"></div>
+                <p id="quiz-feedback" aria-live="polite"></p>
+                <button id="next-question" class="button primary" hidden>Next question →</button>
+                <div id="quiz-result" hidden>
+                    <h3 id="result-title"></h3>
+                    <p id="result-text"></p>
+                    <button id="restart-quiz" class="button secondary">Try again</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section sources-section" id="sources">
+            <p class="eyebrow">04 / EVIDENCE BOARD</p>
+            <h2>Follow the evidence</h2>
+            <p class="section-intro">Use credible sources to verify the facts. The law discussed here is U.S. federal law.</p>
+            <ol class="source-list">
+                <li>
+                    <strong>Federal Trade Commission (FTC)</strong>
+                    <p>Children's Online Privacy Protection Rule — official U.S. federal guidance on COPPA.</p>
+                    <a href="https://www.ftc.gov/business-guidance/privacy-security/childrens-privacy" target="_blank" rel="noopener noreferrer">FTC: Children's Privacy ↗</a>
+                </li>
+                <li>
+                    <strong>National Institute of Standards and Technology (NIST)</strong>
+                    <p>Privacy Framework — guidance that helps organizations identify and manage privacy risks. It is a voluntary framework, not itself a law.</p>
+                    <a href="https://www.nist.gov/privacy-framework" target="_blank" rel="noopener noreferrer">NIST Privacy Framework ↗</a>
+                </li>
+            </ol>
+            <p class="disclaimer">Educational resource, not legal advice. Laws and their application depend on the facts and circumstances.</p>
+        </section>
+
+        <section class="section feedback-section" id="feedback">
+            <p class="eyebrow">05 / USER TESTING</p>
+            <h2>Improve the investigation</h2>
+            <p class="section-intro">Have a classmate try the site. Record their real feedback and one change you make as a result.</p>
+            <div class="feedback-template">
+                <p><strong>Classmate tester:</strong> ____________________</p>
+                <p><strong>What they found confusing or difficult:</strong></p>
+                <p>________________________________________________</p>
+                <p><strong>Improvement I made based on their feedback:</strong></p>
+                <p>________________________________________________</p>
+                <p><strong>How the improvement helped:</strong></p>
+                <p>________________________________________________</p>
+            </div>
+            <p class="small-note">Complete this section after a real classmate has tested your website. Do not invent feedback.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>PRIVACY DETECTIVE · Performance Standard 5.3</p>
+        <p>Think critically. Protect privacy. Build technology responsibly.</p>
+        <a href="#home">Back to the beginning ↑</a>
+    </footer>
+</body>
+</html>
